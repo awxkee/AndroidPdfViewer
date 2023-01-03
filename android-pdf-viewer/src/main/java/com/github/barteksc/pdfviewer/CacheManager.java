@@ -16,7 +16,8 @@
 package com.github.barteksc.pdfviewer;
 
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.github.barteksc.pdfviewer.model.PagePart;
 
@@ -179,7 +180,7 @@ class CacheManager {
         }
     }
 
-    class PagePartComparator implements Comparator<PagePart> {
+    static class PagePartComparator implements Comparator<PagePart> {
         @Override
         public int compare(PagePart part1, PagePart part2) {
             if (part1.getCacheOrder() == part2.getCacheOrder()) {
